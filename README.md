@@ -1,34 +1,36 @@
-# San Diego Crime Incidents with Victim Descriptions
+# San Diego Crime Incidents with Demographic Descriptions
 
+This dataset describes crime incidents from 2016 to 2020, with demographic
+information for both the victims and suspects. The file has multiple rows per 
+incident, one for each suspect or victim. The primary key ``pk`` links records 
+together into a single crime incident. The dataset is derived from data acquired for a 
+PRA request and is processed to standardize geographic identifiers and racial categories. 
 
-There are important national conversations going on about criminal justice
-reform, aligning resources towards prevention and community support rather than
-primarily for policing, and calls to Defund or Abolish the Police. These are
-all valuable discussions about the communities in which we want to live. An
-important voice in that conversation is the voice of victims of crime. The data
-below is a complete data set for victims of violent crime from ARJIS (Automated
-Regional Justice Information System) for San Diego County, the nation's fifth
-largest County, from 2016 through 2020. The complete data set, a cleaned
-version of the data, a data dictionary, the Public Records Act request on which
-the data was based and several maps are provided for review. A full
-conversation requires diverse voices and will help ensure that resources are
-realigned in a way that furthers the dual aims of equity and safety in our
-communities. 
-
-
-The file has multiple rows per incident, one for each suspect or
-victim. The primary key ``pk`` links records together into a single crime incident. 
+Refer to the [source dataset](https://data.sandiegodata.org/dataset/arjis-org-crime-victims-pra/) 
+for the original data and the PRA request used to acquire it. 
 
 ## Processing
 
-The data presented here are a processed version of the file received from San 
-Diego County through a Public Records Act request. The processing includes:
+The data presented here are a processed version of the file received from ARJIS 
+through a Public Records Act request. The processing includes:
 
 * Converting the tract identifier to a formal ACS format tract geoid
 * Converting the block identifier to a formal ACS format block geoid
 * Adding the position of the centroid of the tracts, in WKT format
 * Adding the Census internal point location, for the block, in WGS 84 latitude and longitude. 
 * Recording the race field to the Census race / ethinicity scheme. 
+
+Additiona processing that was performed on the upstream data, which came directly
+from ARJIS, includes: 
+
+* Created "year" field
+* Deleted MACRStatus from years 2017-2020
+* Combined years into 1 file
+* Deleted partial August cases to have complete month
+* Deleted 2 ARJIS and 1 DA as AGENCY records
+* Deleted incident type (all were crime case), highcharge (all were 1) and  role (all were incident)
+* ALLYRS_NOSUSP includes only victims, victim/witnesses and blank (property?) in the person role
+* UNIQUECASE includes unique case numbers (no matter how many victims)
 
 ### Race recode
 
