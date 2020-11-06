@@ -1,37 +1,38 @@
-Declare,metatab-latest,,,
-Title,San Diego Crime Incidents with Demographic Descriptions,,,
-Description,"Crime incidents in San Diego, from 2016 though July 2020 inclusive, with UCR",,,
-Description,"codes for the crime and the age, race and sex of the victim and suspect.",,,
-Identifier,90784cba-aafa-447c-824f-85f4ff76e647,,,
-Name,sandiegodata.org-crime_victims-1.1.1,,,
-Dataset,crime_victims,,,
-Origin,sandiegodata.org,,,
-Time,,,,
-Space,,,,
-Grain,,,,
-Variant,,,,
-Version,1.1.1,,,
-Version.Major,1,,,
-Version.Minor,1,,,
-Version.Patch,1,,,
-Created,2020-09-27T17:20:14,,,
-Modified,2020-09-28T05:21:19,,,
-,,,,
+Declare,metatab-latest
+Title,San Diego Crime Incidents with Demographic Descriptions
+Description,"Crime incidents in San Diego, from 2016 though July 2020 inclusive, with UCR"
+Description,"codes for the crime and the age, race and sex of the victim and suspect."
+Identifier,90784cba-aafa-447c-824f-85f4ff76e647
+Name,sandiegodata.org-crime_victims-1.1.1
+Dataset,crime_victims
+Origin,sandiegodata.org
+Time,
+Space,
+Grain,
+Variant,
+Version,1.1.1
+Version.Major,1
+Version.Minor,1
+Version.Patch,1
+Created,2020-09-27T17:20:14
+Modified,2020-11-06T17:55:49
+Giturl,https://github.com/metatab-packages/sandiegodata.org-crime_victims.git
+""
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-,,,,
+""
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
-,,,,
+""
 Section,References,Name,Description,
 Reference,data/census_blocks.csv,census_blocks,"Census 2010 blocks, converted to ACS geoids, with centroid position",
 Reference,http://ds.civicknowledge.org.s3.amazonaws.com/sandag.org/OPCrimeVictims/Omar%20Passons%20-%20SDCounty_CrimeData_Jan16_Jul20.xlsx,op_sd_crime_xls,Response from PRA request,
 Reference,http://ds.civicknowledge.org.s3.amazonaws.com/sandag.org/OPCrimeVictims/sd_crime_data.csv,op_sd_crime_csv,Conversion of main tab of response data to CSV,
-,,,,
+""
 Section,Resources,Name,Description,Schema
 Datafile,python:pylib#clean_crime,sdcrime_16_20,"San Diego crime suspects and victims, 2016 to  2020",
 Datafile,data/CodeUCRLookup.csv,ucrcodes,UCR codes and detailed descriptions,
-,,,,
+""
 Section,Schema,DataType,Description,Altname
 Table,ucrcodes,,,
 Table.Column,index,integer,,
