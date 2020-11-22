@@ -3,19 +3,19 @@ Title,San Diego Crime Incidents with Demographic Descriptions
 Description,"Crime incidents in San Diego, from 2016 though July 2020 inclusive, with UCR"
 Description,"codes for the crime and the age, race and sex of the victim and suspect."
 Identifier,90784cba-aafa-447c-824f-85f4ff76e647
-Name,sandiegodata.org-crime_victims-1.1.1
+Name,sandiegodata.org-crime_victims-1.1.2
 Dataset,crime_victims
 Origin,sandiegodata.org
 Time,
 Space,
 Grain,
 Variant,
-Version,1.1.1
+Version,1.1.2
 Version.Major,1
 Version.Minor,1
-Version.Patch,1
+Version.Patch,2
 Created,2020-09-27T17:20:14
-Modified,2020-11-06T17:55:49
+Modified,2020-11-06T18:18:07
 Giturl,https://github.com/metatab-packages/sandiegodata.org-crime_victims.git
 ""
 Section,Contacts,Email,Organization,Url
